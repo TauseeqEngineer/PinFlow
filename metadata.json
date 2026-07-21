@@ -1,0 +1,6 @@
+{
+  "name": "PinDown",
+  "description": "Premium Pinterest Video Downloader with built-in player, history, search, and favorites.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
