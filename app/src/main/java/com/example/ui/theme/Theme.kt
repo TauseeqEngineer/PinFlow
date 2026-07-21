@@ -12,36 +12,41 @@ import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
     primary = PinterestRed,
-    secondary = RoseGold,
-    tertiary = SoftBlush,
+    secondary = PinterestRose,
+    tertiary = PinterestLightRed,
     background = DarkBackground,
     surface = DarkSurface,
     surfaceVariant = DarkSurfaceVariant,
     onBackground = DarkOnBackground,
     onSurface = DarkOnSurface,
+    onSurfaceVariant = DarkOnSurfaceVariant,
     onPrimary = DarkOnBackground,
     onSecondary = DarkBackground,
-    onTertiary = DarkBackground
+    onTertiary = DarkBackground,
+    error = ErrorRed,
+    errorContainer = ErrorRedContainer
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = PinterestRed,
     secondary = PinterestDarkRed,
-    tertiary = BlushPink,
+    tertiary = PinterestLightRed,
     background = LightBackground,
     surface = LightSurface,
     surfaceVariant = LightSurfaceVariant,
     onBackground = LightOnBackground,
     onSurface = LightOnSurface,
+    onSurfaceVariant = LightOnSurfaceVariant,
     onPrimary = LightSurface,
     onSecondary = LightSurface,
-    onTertiary = LightSurface
+    onTertiary = LightSurface,
+    error = ErrorRed,
+    errorContainer = ErrorRedContainer
 )
 
 @Composable
 fun MyApplicationTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Keep dynamic color false by default to enforce our premium brand red
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit,
 ) {
@@ -57,6 +62,7 @@ fun MyApplicationTheme(
     MaterialTheme(
         colorScheme = colorScheme,
         typography = Typography,
+        shapes = Shapes,
         content = content
     )
 }
